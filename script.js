@@ -1,65 +1,45 @@
-const budgetForm = document.getElementById('budget-form');
-const list = document.getElementById('budget-list');
-const addBtn = document.getElementById('add');
+function add(){
+    const type=document.getElementById("type").value;
+    const name=document.getElementById("name").value;
+    const amount=document.getElementById("amount").value;
+    const data=document.getElementById("data");
 
-// Initialize budget data
-let data = [];
+    if(type===""){
+        alert("Please select a type");
+        return;
+    }
+    else if(name==="")
+    {
+        alert("Enter a name");
+        return;
+    }
+    else if(amount===""){
+        alert("Enter an amount");
+        return;
+    }
 
-// Add event listener to add button
-addBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+    const trow=document.createElement("tr");
+    const ttype=document.createElement("td");
+    const tname=document.createElement("td");
+    const tamount=document.createElement("td");
+    const toption=document.createElement("td");
 
-    // Get form data
-    const type = document.getElementById('type').value;
-    const name = document.getElementById('name').value;
-    const amount = parseFloat(document.getElementById('amount').value);
+    const deleteb=document.createElement("button");
+    deleteb.textContent="Delete";
 
-    // Create budget item object
-    const budgetItem = {
-        type,
-        name,
-        amount
+    deleteb.onclick=function() {
+        trow.remove();
     };
+    ttype.textContent = type;
+    tname.textContent = name;
+    tamount.textContent = amount;
+    toption.appendChild(deleteb);
+    trow.appendChild(ttype);
+    trow.appendChild(tname);
+    trow.appendChild(tamount);
+    trow.appendChild(toption);
+    data.appendChild(trow);
 
-    // Add budget item to data array
-    data.push(budgetItem);
-
-    // Render budget list
-    renderlist();
-});
-
-// Render budget list function
-function renderlist() {
-    // Clear budget list
-    list.innerHTML = '';
-
-    // Loop through budget data array
-    data.forEach((item, index) => {
-        // Create budget item element
-        const budgetItemElement = document.createElement('li');
-        budgetItemElement.classList.add('budget-item');
-
-        // Create delete button element
-        const deleteBtnElement = document.createElement('button');
-        deleteBtnElement.classList.add('delete-btn');
-        deleteBtnElement.textContent = 'Delete';
-        deleteBtnElement.addEventListener('click', () => {
-            // Remove budget item from data array
-            data.splice(index, 1);
-
-            // Render budget list
-            renderlist();
-        });
-
-        // Create budget item text element
-        const budgetItemTextElement = document.createElement('span');
-        budgetItemTextElement.textContent = `${item.name}: ${item.amount} (${item.type})`;
-
-        // Append elements to budget item element
-        budgetItemElement.appendChild(budgetItemTextElement);
-        budgetItemElement.appendChild(deleteBtnElement);
-
-        // Append budget item element to budget list
-        list.appendChild(budgetItemElement);
-    });
+    return false;
+    
 }
