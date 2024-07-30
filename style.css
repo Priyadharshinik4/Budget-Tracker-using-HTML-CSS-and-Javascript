@@ -1,1 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 99.09%;
+}
+.heading{
+    background-color: goldenrod;
+    padding: 20px;
+}
+.heading h1{
+    font-size: 32px;
+    text-align: center;
+    color: white;
+}
+.input{
+    text-align: center;
+    padding: 50px;
+}
+.input label{
+    font-size: 22px;
+}
+.input select,input{
+    width: 40%;
+    padding: 3px;
+}
+.input input{
+    margin-top: 15px;
+}
+.button{
+    text-align: center;
+}
+button{
+    padding: 15px;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+button:hover{
+    transform: scale(1.1);
+}
+table {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 5px;
+}
+table input{
+    width: 100%;
+    background-color: rgb(209, 205, 205);
+    border: none;
+    padding: 13px;
+}
+table th{
+    text-align: center;
+    background-color: goldenrod;
+    padding: 13px;
+}
+
+
 
