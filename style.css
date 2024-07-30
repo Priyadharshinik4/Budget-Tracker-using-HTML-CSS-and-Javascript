@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    border: 2px transparent;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #fbf0fbf4;
+    width: 900px;
+}
+
+form label{
+    padding-left: 50px;
+    font-weight: bolder;
+    color: #ed8f45;
+    font-size: x-large;
+}
+
+form input,select{
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: none;
+}
+
+button{
+    margin-left: 380px;
+    margin-top: 50px;
+    font-size: large;
+    color: #fbf0fbf4;
+    border: none;
+    background-color: #ed8f45;
+    padding: 10px;
+    width: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+table {
+    margin-left: 28%;
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 50px;
+    max-width: 900px;
+}
+
+table th,td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #ed8f45;
+    color: #fbf0fbf4;
+}
+
+table td{
+    background-color: #fbf0fbf4;
+    color: #ed8f45;
+}
+
+table td button {
+    background-color: #ed8f45;
+    color: #fbf0fbf4;
+    border: none;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+}
+
+#budget-form {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#budget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.budget-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.budget-item:last-child {
+    border-bottom: none;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #e91e63;
+} */
